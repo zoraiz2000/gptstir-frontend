@@ -136,7 +136,16 @@ const ChatHistory = ({ onSelectConversation, currentConversationId, conversation
             <div className="flex items-center gap-2">
               <div className="relative">
                 <button
-                  className={`p-1 rounded hover:bg-[rgb(43,43,43)] text-gray-400 dropdown-toggle ${!hasDropdownOpen ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'} transition-opacity duration-200`}
+                  className={`
+                    p-1 rounded 
+                    hover:bg-[rgb(43,43,43)] 
+                    text-gray-400 
+                    dropdown-toggle 
+                    opacity-100 xl:opacity-0 
+                    xl:group-hover:opacity-100 
+                    ${hasDropdownOpen ? '!opacity-100' : ''} 
+                    transition-opacity duration-200
+                  `}
                   onClick={(e) => {
                     e.stopPropagation();
                     setActiveDropdown(hasDropdownOpen ? null : conv.id);
