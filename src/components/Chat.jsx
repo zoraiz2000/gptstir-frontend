@@ -150,9 +150,9 @@ const Chat = ({ conversationId, onConversationCreate, onConversationsUpdate }) =
     };
 
     return (
-        <div className="flex flex-col h-full bg-[rgb(17,17,17)]">
+        <div className="flex flex-col h-full relative">
             {/* Messages Container - Scrollable */}
-            <div className="flex-1 overflow-y-auto custom-scrollbar">
+            <div className="absolute inset-0 bottom-[100px] overflow-y-auto custom-scrollbar">
                 <div className="max-w-3xl mx-auto py-4 px-4">
                     {loading ? (
                         <div className="flex items-center justify-center h-full">
@@ -216,8 +216,8 @@ const Chat = ({ conversationId, onConversationCreate, onConversationsUpdate }) =
                 </div>
             </div>
 
-            {/* Input Bar - Fixed */}
-            <div className="flex-shrink-0 bg-[rgb(17,17,17)] pb-4 px-4">
+            {/* Input Bar - Fixed at bottom */}
+            <div className="absolute bottom-0 left-0 right-0 bg-[rgb(17,17,17)] p-4">
                 <div className="max-w-3xl mx-auto">
                     <InputBar onSendMessage={handleSendMessage} />
                 </div>

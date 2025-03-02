@@ -82,9 +82,9 @@ const AppRoutes = () => {
         path="/" 
         element={
           <PrivateRoute>
-            <div className="flex h-screen overflow-hidden">
+            <div className="fixed inset-0 flex overflow-hidden">
               {/* Left Sidebar - Desktop */}
-              <div className="hidden xl:flex flex-col w-[400px] flex-shrink-0">
+              <div className="hidden xl:flex flex-col w-[400px] flex-shrink-0 bg-[rgb(17,17,17)]">
                 <Providers />
                 <ChatHistory 
                   onSelectConversation={handleSelectConversation}
@@ -102,11 +102,11 @@ const AppRoutes = () => {
                 onTouchEnd={handleTouchEnd}
                 className={`
                   fixed inset-y-0 left-0 z-40 w-[90%] max-w-[400px] flex-shrink-0 xl:hidden
-                  transform transition-transform duration-300 ease-in-out
+                  transform transition-transform duration-300 ease-in-out bg-[rgb(17,17,17)]
                   ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
                 `}
               >
-                <div className="flex flex-col h-full bg-[rgb(23,23,23)]">
+                <div className="flex flex-col h-full">
                   <Providers />
                   <ChatHistory 
                     onSelectConversation={handleSelectConversation}
@@ -126,15 +126,15 @@ const AppRoutes = () => {
               )}
 
               {/* Main Content */}
-              <div className="flex-1 flex flex-col h-[100dvh] min-w-0">
+              <div className="flex-1 flex flex-col min-w-0 bg-[rgb(17,17,17)]">
                 {/* Navbar */}
                 <Navbar toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
 
                 {/* Content Area */}
                 <div className="flex-1 flex min-w-0 overflow-hidden">
-                  <div className="flex-1 flex justify-center h-full">
+                  <div className="flex-1 flex justify-center">
                     {/* Chat Section */}
-                    <div className="w-full max-w-[848px] min-w-[300px] flex-shrink-0 h-full overflow-hidden">
+                    <div className="w-full max-w-[848px] min-w-[300px] flex-shrink-0">
                       <Chat 
                         conversationId={currentConversationId}
                         onConversationCreate={setCurrentConversationId}

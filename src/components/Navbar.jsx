@@ -25,7 +25,7 @@ const Navbar = ({ toggleSidebar, isSidebarOpen }) => {
   }, [dropdownOpen]);
 
   return (
-    <div className="h-16 flex items-center justify-between px-6">
+    <div className="h-16 flex items-center justify-between px-6 bg-[rgb(17,17,17)] border-b border-stone-50/10 sm:border-none" >
       <div className="flex items-center gap-4">
         {/* Hamburger Menu - Mobile Only */}
         <button
