@@ -126,7 +126,7 @@ const AppRoutes = () => {
               )}
 
               {/* Main Content */}
-              <div className="flex-1 flex flex-col min-w-0">
+              <div className="flex-1 flex flex-col h-[100dvh] min-w-0">
                 {/* Navbar */}
                 <Navbar toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
 

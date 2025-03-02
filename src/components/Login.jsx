@@ -35,8 +35,8 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-[rgb(17,17,17)]">
-      <div className="bg-[rgb(23,23,23)] p-8 rounded-xl border border-stone-50/10 shadow-lg w-96">
+    <div className="flex items-center justify-center h-[100dvh] bg-[rgb(17,17,17)]">
+      <div className="flex flex-col items-center justify-center bg-[rgb(23,23,23)] p-8 sm:p-16 sm:px-30 rounded-xl border border-stone-50/10">
         <h1 className="text-2xl text-white font-semibold text-center mb-8">Welcome to GPTStir</h1>
           <GoogleLogin
             onSuccess={handleGoogleSuccess}
